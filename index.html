@@ -9,6 +9,7 @@
         position:absolute;
         top:40%;
         font-size:48px;
+        width:100%;
       }
       iframe{
         position:absolute;
@@ -27,7 +28,7 @@
   </head>
   <body>
   <center id="loading">Please Wait...</center>
-    <iframe onload="loadok(this)" src="http://www.shirt-t.com:8088/"></iframe>
+    <iframe width="100%" height="100%" onload="loadok(this)" src="http://www.shirt-t.com:8088/"></iframe>
     <script>
       function loadok(node){
         document.getElementById('loading').style.display="none";
