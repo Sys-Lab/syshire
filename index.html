@@ -345,8 +345,7 @@ font-size: 24px;
         	<div id="SYS_hire_main_fp_logo" class="ani">SysLab</div>
             <div id="SYS_hire_main_fp_us">我们只是网络浪潮的逐梦者</div>
             <div id="SYS_hire_main_fp_about">
-            	SysLab-专注互联网和移动互联网的研发<br/>
-            	由张翼成教授和周涛教授支持<br/>
+            	专注互联网和移动互联网<br/>
                 加入我们,一起创新吧
             </div>
         </center>
@@ -473,7 +472,6 @@ font-size: 24px;
 		email:0,
 		comefrom:0,
 		magic1:0,
-		cool:0,
 		difference:0,
 		magic2:0,
 		product_or_dev:0,
@@ -658,9 +656,9 @@ font-size: 24px;
 		_f("#SYS_hire_main_con_sending_icon").innerHTML="&#xe096;";
 		_c(_f("#SYS_hire_main_con_sending_icon")).add("loading_rotate");
 		socket.on('joinus_ok', function (data) {
-			clearsetTimeout(thisjob);
+			clearTimeout(thisjob);
 			setTimeout(function(){
-				_f("#SYS_hire_main_con_sending_words").innerHTML="面试报名成功，请耐心等候通知``";
+				_f("#SYS_hire_main_con_sending_words").innerHTML="面试报名成功，请耐心等候通知";
 				_f("#SYS_hire_main_con_sending_icon").innerHTML="&#x56;";
 				_c(_f("#SYS_hire_main_con_sending_icon")).remove("loading_rotate");
 			},2000)
@@ -669,7 +667,7 @@ font-size: 24px;
 		var thisjob=setTimeout(err,20000);
 	}
 	var err=function(){
-			_f("#SYS_hire_main_con_sending_words").innerHTML="报名出错了,请<b onclick='start_send()'>重试</b>";
+			_f("#SYS_hire_main_con_sending_words").innerHTML="报名出错了,请<b onclick='start_send()'>点击重试</b>";
 			_f("#SYS_hire_main_con_sending_icon").innerHTML="&#xe047;";
 			_c(_f("#SYS_hire_main_con_sending_icon")).remove("loading_rotate");
 	}
@@ -935,8 +933,9 @@ font-size: 24px;
         particles.forEach(draw);
       }());
 	}
-	var socket=io.connect("http://www.shirt-t.com:6000/");
+	var socket=io.connect("http://shirt-t.com:12580/");
 	socket.on('connected', function (data) {
+        data=data.data;
 		i_am_code_2=function(){
 			console.log("second:"+data.magic2);
 		}
