@@ -680,7 +680,7 @@ font-size: 24px;
 		   dataType: 'jsonp',
 		   data: HIRE_FORM,
 		   success: function (data) {
-		   		if (data.status===success) {
+		   		if (data.status==='success') {
 		   			_f("#SYS_hire_main_con_sending_words").innerHTML="面试报名成功，请耐心等候通知";
 					_f("#SYS_hire_main_con_sending_icon").innerHTML="&#x56;";
 					_c(_f("#SYS_hire_main_con_sending_icon")).remove("loading_rotate");
